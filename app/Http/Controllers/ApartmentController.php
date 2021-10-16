@@ -30,7 +30,7 @@ class ApartmentController extends Controller
         $apartment->thumbnail = $thumbnail;
         $apartment->status = $status;
         $apartment->save();
-        return 'ok';
+        return redirect('admin/event/list')->with('success', 'Event edited successfully!');
     }
 
     public function getList()
